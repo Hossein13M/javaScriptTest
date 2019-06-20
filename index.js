@@ -196,32 +196,88 @@
 // console.log(c === b)
 
 
-// this is the exercise number 3:
+// // this is the exercise number 3:
 
-function Address(street, city, zipCode) {
-    this.street = street;
-    this.city = city;
-    this.zipCode = zipCode;
+// function Address(street, city, zipCode) {
+//     this.street = street;
+//     this.city = city;
+//     this.zipCode = zipCode;
 
-}
+// }
 
-let address1 = new Address('a', 'b', 'c');
-let address2 = new Address('a', 'b', 'c');
+// let address1 = new Address('a', 'b', 'c');
+// let address2 = new Address('a', 'b', 'c');
 
-function areEqaul(firstAddress, secondAddress) {
+// function areEqaul(firstAddress, secondAddress) {
 
-    if (firstAddress.street === secondAddress.street && firstAddress.city === secondAddress.city && firstAddress.zipCode === secondAddress.zipCode) {
-        console.log("they are the same address")
-    } else
-        console.log("these two addresses are not equal")
-}
-areEqaul(address1, address2);
+//     if (firstAddress.street === secondAddress.street && firstAddress.city === secondAddress.city && firstAddress.zipCode === secondAddress.zipCode) {
+//         console.log("they are the same address")
+//     } else
+//         console.log("these two addresses are not equal")
+// }
+// areEqaul(address1, address2);
 
-function areSame(add1, add2) {
+// function areSame(add1, add2) {
 
-    if (add1 === add2) {
-        console.log("the are exactly the same")
-    } else
-        console.log("they are not exactly the same")
-}
-areSame(address1, address2);
+//     if (add1 === add2) {
+//         console.log("the are exactly the same")
+//     } else
+//         console.log("they are not exactly the same")
+// }
+// areSame(address1, address2);
+
+// TODO: exercise number four:
+
+// const postBlock = {
+//     title: "titleValue",
+//     body: "bodyValue",
+//     author: "authorValue",
+//     views: 50,
+//     comment: {
+//         author: "CommentAuthorValue",
+//         body: "commentBodyValue",
+//     },
+//     isLive: true,
+// };
+
+// function nestingPrint(obj, deps = 0) {
+//     const keyArray = Object.keys(obj);
+//     console.log(keyArray);
+//     keyArray.forEach(key => {
+//         if (typeof obj[key] == "object")
+//             nestingPrint(obj[key], deps + 1)
+//         else console.log(`deps:${deps} key:${key} value:${obj[key]}`)
+//     });
+// }
+
+// nestingPrint(postBlock);
+
+//Object.keys(postBlock).forEach(key => console.log(key, " : ", postBlock[key]));
+
+function animal(name) {
+    this.name = name;
+};
+
+animal.prototype.eat = function(obj) {
+    console.log(name + ": object " + obj + " ate");
+};
+//------------------------
+function wildAnimal(name) {
+    animal.bind(this)(name);
+};
+wildAnimal.prototype = Object.create(animal.prototype);
+wildAnimal.prototype.constructor = wildAnimal;
+
+wildAnimal.prototype.hunt = function(obj) {
+    console.log("hunted", obj);
+};
+// //-------------------------
+// function yusAnimal() {};
+
+// function aliYousefi() {};
+
+// function khashayar() {};
+
+
+const test = new wildAnimal("eshak");
+console.log(test);
