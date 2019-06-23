@@ -253,31 +253,125 @@
 // nestingPrint(postBlock);
 
 //Object.keys(postBlock).forEach(key => console.log(key, " : ", postBlock[key]));
+// TODO: this is the inheritance
 
-function animal(name) {
-    this.name = name;
-};
+// function animal(name) {
+//     this.name = name;
+// };
 
-animal.prototype.eat = function(obj) {
-    console.log(name + ": object " + obj + " ate");
-};
-//------------------------
-function wildAnimal(name) {
-    animal.bind(this)(name);
-};
-wildAnimal.prototype = Object.create(animal.prototype);
-wildAnimal.prototype.constructor = wildAnimal;
+// animal.prototype.eat = function(obj) {
+//     console.log(name + ": object " + obj + " ate"); 
+// };
+// //------------------------
+// function wildAnimal(name) {
+//     animal.bind(this)(name);
+// };
+// wildAnimal.prototype = Object.create(animal.prototype);
+// wildAnimal.prototype.constructor = wildAnimal;
 
-wildAnimal.prototype.hunt = function(obj) {
-    console.log("hunted", obj);
-};
-// //-------------------------
-// function yusAnimal() {};
+// wildAnimal.prototype.hunt = function(obj) {
+//     console.log("hunted", obj);
+// };
+// // //-------------------------
+// // function yusAnimal() {};
 
-// function aliYousefi() {};
+// // function aliYousefi() {};
 
-// function khashayar() {};
+// // function khashayar() {};
 
 
-const test = new wildAnimal("eshak");
-console.log(test);
+// const test = new wildAnimal("eshak");
+// console.log(test);
+
+// dastan: this is the exercise of the MOSH:
+
+// let post = {
+//     title: 'this is the title',
+//     body: 'This is the body',
+//     author: 'this is the author ',
+//     views: 10,
+//     comments: [
+//         { author: 'first comment author', body: 'first comment body' },
+//         { author: 'second comment author', body: 'second comment body' }
+//     ],
+//     isLive: true
+// };
+
+// function Post(title, body, author) {
+//     this.title = title;
+//     this.body = body;
+//     this.author = author;
+//     this.views = 0;
+//     this.comments = [];
+//     this.isLive = false;
+// }
+
+// let slam = new Post('hossein', 'ali', 'author');
+// console.log(slam);
+
+// dastan: this is the last exercise of the Mosh
+
+// let priceRange = [
+//     { lebel: '$', tooltip: 'inexpensive', minPrice: 0, masPrice: 10 },
+//     { lebel: '$', tooltip: 'moderate', minPrice: 11, masPrice: 20 },
+//     { lebel: '$', tooltip: 'expensive', minPrice: 21, masPrice: 30 }
+
+// ];
+
+// dastan: this is the array part of Mosh
+
+
+// numbers.push(5);
+// numbers.unshift(1);
+// numbers.splice(2, 0, 'a', 'b');
+// console.log(numbers.indexOf(1));
+// console.log(numbers.includes(1));
+// const numbers = [1, 2, 3, 4, 1];
+
+// const courses = [
+//     { id: 1, name: 'a' },
+//     { id: 2, name: 'b' },
+//     { id: 3, name: 'c' },
+// ];
+
+// courses.find()function Product(name, price) {
+// this.name = name;
+// this.price = price;
+// }
+
+
+
+// function Product(name, price) {
+//     this.name = name;
+//     this.price = price;
+//     console.log(this);
+// }
+// console.log(this);
+
+// function Food(name, price) {
+//     Product.call(this, name, price);
+//     console.log(this);
+//     this.category = 'food';
+//     console.log(this);
+// }
+
+// console.log(new Food('cheese', 5).category);
+// console.log(this);
+
+// const numbers = [1, 2, 3, 4];
+// console.log(numbers);
+// numbers.pop();
+// console.log(numbers);
+// numbers.shift();
+// console.log(numbers);
+// numbers.splice(0, 1)
+// console.log(numbers);
+
+// dastan: how to empty an array?
+let numbers = [1, 2, 3, 4];
+console.log(numbers);
+let another = numbers;
+console.log(another);
+numbers = [];
+console.log(numbers);
+console.log(another);
