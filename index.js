@@ -368,10 +368,35 @@
 // console.log(numbers);
 
 // dastan: how to empty an array?
-let numbers = [1, 2, 3, 4];
-console.log(numbers);
-let another = numbers;
-console.log(another);
-numbers = [];
-console.log(numbers);
-console.log(another);
+// let numbers = [1, 2, 3, 4];
+// console.log(numbers);
+// let another = numbers;
+// console.log(another);
+// numbers = [];
+// console.log(numbers);
+// console.log(another);
+
+// another.splice(0, another.length);
+// console.log(another);
+
+// dastan: this is the combining an array?
+
+// const first = [{ id: 1 }];
+// const second = [4, 5, 6];
+// const combined = first.concat(second);
+// first[0].id = 10;
+// console.log(combined);
+
+// const sliced = combined.slice();
+// console.log(sliced);
+
+// // dastan: spread approach?
+
+// const hello = ['a', ...first, ...second];
+// console.log(hello);
+
+
+// TODO: 
+
+// let numbers = [1, 2, 3, 4, 5];
+// numbers.forEach(number => console.log(`hello ${number}`))
