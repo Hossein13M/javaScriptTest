@@ -447,14 +447,151 @@
 // dastan: this is the callback function
 
 
-const numbers = [1, -4, 5, 6, 7, -8];
+// const numbers = [1, -4, 5, 6, 7, -8];
 
-const filtered = numbers.filter(value => value >= 0);
+// const filtered = numbers.filter(value => value >= 0);
 
-const items = filtered.map(n => '<li>' + n + '</li>');
+// const items = filtered.map(n => '<li>' + n + '</li>');
 
-const html = items.join('')
+// const html = items.join('')
 
-console.log(html);
+// console.log(html);
 
-console.log(items);
+// console.log(items);
+
+// dastan: let's start the exercises
+
+
+// function rangeArray(minNumber, maxNumber) {
+//     let theArray = [];
+//     for (i = minNumber; i <= maxNumber; i++)
+//         theArray.push(i);
+
+//     console.log(theArray);
+// }
+// rangeArray(2, 4);
+
+// dastan: exercise number two:
+
+// function checkNumber(theArray, theNumber) {
+//     for (let element of theArray)
+//         if (element === theNumber)
+//             return true;
+//     return false;
+
+
+// }
+// const numbers = [1, 2, 3];
+
+// console.log(checkNumber(numbers, 8))
+
+
+// dastan: this is the third exercise
+
+// let numbers = [1, 2, 3, 4];
+
+// function except(theArray, excludedArray) {
+//     let newArray = [];
+//     for (let theArrayIndex = 0; theArrayIndex < theArray.length; theArrayIndex++) {
+//         for (let index = 0; index < excludedArray.length; index++) {
+//             if (theArray[theArrayIndex] !== excludedArray[index])
+//                 newArray.unshift(theArray[theArrayIndex]);
+//         }
+
+//     }
+// }
+// let output = except(numbers, [1, 3])
+// console.log(output);
+
+// TODO: the second appraoch:
+
+
+
+// function checkNumber(theArray, theNumber) {
+//     for (let element of theArray)
+//         if (element === theNumber)
+//             return true;
+//     return false;
+
+
+// // }
+
+// function except(array, excluded) {
+//     let output = [];
+//     for (let element of array)
+//         if (!excluded.includes(element))
+//             output.push(element);
+//     return output;
+
+// }
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const output = except(numbers, [1]);
+// console.log(output);
+
+// dastan: this is the moving an element exercise:
+
+// let numbers = [1, 2, 3, 4];
+
+// function move(array, index, offset) {
+//     let output = [...array];
+//     let temp = [...array];
+//     // if (offset > length(array))
+//     //     console.error("out of range");
+//     temp[offset] = output[index];
+//     output[index] = array[offset];
+//     return;
+// }
+
+// const myOutput = move(numbers, 1, 3);
+// console.log(myOutput);
+
+// dastan: countOccurrences
+
+// const numbers = [1, 2, 3, 4, 5, 6, 1, 1, 1, 1, 1, 1, 4, 4, 4, 5, 2];
+
+// function Count(array, searchElement) {
+//     let countNumber = 0;
+//     for (const element of array)
+//         if (element === searchElement)
+//             countNumber += 1;
+//     return countNumber;
+// }
+// console.log(Count(numbers, 1))
+
+// // TODO: using reduce:
+
+// function Count(array, searchElement) {
+//     return array.reduce((accum, current) => {
+//         if (current === searchElement)
+//             accum++;
+//         return accum;
+//     }, 0)
+// }
+
+// console.log(Count(numbers, 4))
+
+// dastan: the last exercise//
+
+const movies = [
+    { title: 'a', year: 2018, rating: 4.5 },
+    { title: 'b', year: 2018, rating: 4.7 },
+    { title: 'c', year: 2018, rating: 3 },
+    { title: 'd', year: 2017, rating: 4.5 },
+];
+
+
+
+function sortDastan(movieArray) {
+    let sortedMovies = []
+    for (let index = 0; index < movies.length; index++)
+        if (movies[index].rating > 4 && movies[index].year > 2017)
+            sortedMovies.push(movies[index].title);
+    sortedMovies.reverse();
+    for (let anotherIndex = 0; anotherIndex < sortedMovies.length; anotherIndex++)
+        console.log(sortedMovies[anotherIndex]);
+}
+
+
+console.log(sortDastan(movies));
+
+a.filter((p) => { p.rating > 4 }).map((o) => {})
