@@ -578,20 +578,25 @@ const movies = [
     { title: 'c', year: 2018, rating: 3 },
     { title: 'd', year: 2017, rating: 4.5 },
 ];
+// function sortDastan(movieArray) {
+//     let sortedMovies = []
+//     for (let index = 0; index < movies.length; index++)
+//         if (movies[index].rating > 4 && movies[index].year > 2017)
+//             sortedMovies.push(movies[index].title);
+//     sortedMovies.reverse();
+//     for (let anotherIndex = 0; anotherIndex < sortedMovies.length; anotherIndex++)
+//         console.log(sortedMovies[anotherIndex]);
+// }
+
+// console.log(sortDastan(movies));
+// const titles = movies
+//     .filter(m => m.year === 2018 && m.rating >= 4)
+//     .sort((a, b) => (a.rating - b.rating))
+//     .reverse()
+//     .map(m => m.title);
 
 
+// console.log(titles);
 
-function sortDastan(movieArray) {
-    let sortedMovies = []
-    for (let index = 0; index < movies.length; index++)
-        if (movies[index].rating > 4 && movies[index].year > 2017)
-            sortedMovies.push(movies[index].title);
-    sortedMovies.reverse();
-    for (let anotherIndex = 0; anotherIndex < sortedMovies.length; anotherIndex++)
-        console.log(sortedMovies[anotherIndex]);
-}
-
-
-console.log(sortDastan(movies));
-
-a.filter((p) => { p.rating > 4 }).map((o) => {})
+// dastan: the array have been finished and now I am ready to start the last part of programming with mosh which is
+// dastan: the learning of the functions
