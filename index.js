@@ -400,3 +400,61 @@
 
 // let numbers = [1, 2, 3, 4, 5];
 // numbers.forEach(number => console.log(`hello ${number}`))
+
+// const numbers = [1, 2, 3, 4];
+// const joined = numbers.join(',');
+// console.log(joined);
+
+// const message = "this is my first message";
+// const message1 = message.split(" ");
+// console.log(message1);
+
+// const parts = message1.join('-');
+// console.log(parts);
+
+// dastan: this is the part 8 of the Mosh videos
+
+// const numbers = [5, 2, 3, 4];
+// numbers.sort();
+// console.log(numbers);
+
+// const courses = [
+//     { id: 1, name: 'first' },
+//     { id: 2, name: 'second' }
+// ]
+
+// console.log(courses);
+// const sortedCourses = courses.sort()
+// console.log(sortedCourses);
+
+
+// courses.sort(function(a, b) {
+
+// })
+
+
+// dastan: this is the callback function 
+// function greeting(name) {
+//     alert('Hello ' + name);
+// }
+
+// function processUserInput(callback) {
+//     var name = prompt('Please enter your name.');
+//     callback(name);
+// }
+
+// processUserInput(greeting);
+// dastan: this is the callback function
+
+
+const numbers = [1, -4, 5, 6, 7, -8];
+
+const filtered = numbers.filter(value => value >= 0);
+
+const items = filtered.map(n => '<li>' + n + '</li>');
+
+const html = items.join('')
+
+console.log(html);
+
+console.log(items);
