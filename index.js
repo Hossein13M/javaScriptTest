@@ -572,12 +572,12 @@
 
 // dastan: the last exercise//
 
-const movies = [
-    { title: 'a', year: 2018, rating: 4.5 },
-    { title: 'b', year: 2018, rating: 4.7 },
-    { title: 'c', year: 2018, rating: 3 },
-    { title: 'd', year: 2017, rating: 4.5 },
-];
+// const movies = [
+//     { title: 'a', year: 2018, rating: 4.5 },
+//     { title: 'b', year: 2018, rating: 4.7 },
+//     { title: 'c', year: 2018, rating: 3 },
+//     { title: 'd', year: 2017, rating: 4.5 },
+// ];
 // function sortDastan(movieArray) {
 //     let sortedMovies = []
 //     for (let index = 0; index < movies.length; index++)
@@ -600,3 +600,47 @@ const movies = [
 
 // dastan: the array have been finished and now I am ready to start the last part of programming with mosh which is
 // dastan: the learning of the functions
+
+
+// TODO: this is the section of the functions
+
+
+
+// function multTask() {
+//     let total = 0;
+//     for (let dastan of arguments) {
+//         total += dastan
+//         console.log(arguments);
+//     }
+//     return total;
+// }
+
+// console.log(multTask(1, 2, 3, 4, 5, 6, 7, 8, 9));
+// dastan: this was the TODO: arguments part
+
+// let's go over the Mosh Hamedani exercise
+
+
+
+function stopWatch() {
+    let startTime, endTime, running, durationTime = 0;
+    // checking the first things
+    if (running = true) {
+        this.start = function() {
+            console.error("the stop watch have been started already!")
+        }
+    }
+    if (running == false) {
+        this.stop = function() {
+            console.error("the stop watch have been stopped already!")
+        }
+    }
+
+    this.start = function() {
+        this.running = true;
+        Date.
+
+
+    }
+
+}
