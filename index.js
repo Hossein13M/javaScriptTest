@@ -622,25 +622,39 @@
 
 
 
-function stopWatch() {
+function StopWatch() {
     let startTime, endTime, running, durationTime = 0;
-    // checking the first things
-    if (running = true) {
-        this.start = function() {
-            console.error("the stop watch have been started already!")
-        }
-    }
-    if (running == false) {
-        this.stop = function() {
-            console.error("the stop watch have been stopped already!")
-        }
-    }
 
     this.start = function() {
-        this.running = true;
-        Date.
+        if (running)
+            throw new Error('the stop watch have been started already!');
 
+        running = true;
 
-    }
+        startTime = new Date();
+    };
+
+    this.stop = function() {
+        if (!running)
+            throw new Error('the stop watch have been stopped already!');
+
+        running = false;
+
+        endTime = new Date();
+
+        const seconds = (endTime.getTime() - startTime.getTime()) / 1000;
+        duration += seconds;
+    };
+
+    this.reset = function() {
+        startTime,
+        endTime = null;
+        running = false;
+        durationTime = 0;
+    };
+
+    Object.defineProperty(this, 'duration', { get: function() { return duration; } })
 
 }
+
+var watch = new StopWatch();
